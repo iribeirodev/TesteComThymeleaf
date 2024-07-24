@@ -8,6 +8,9 @@ ARG APP_PORT=8080
 # Defina o diretório de trabalho dentro do contêiner
 WORKDIR /app
 
+# Adicione um comando para listar o conteúdo do diretório target
+RUN ls -al target
+
 # Copie o arquivo JAR gerado para o contêiner
 COPY ${JAR_FILE} app.jar
 
